@@ -1,0 +1,19 @@
+{
+  "name": "optimization",
+  "version": "1.0.0",
+  "description": "Web Optimization Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo"
+  },
+  "author": "Joe Dodd",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.0.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-responsive-images": "0.0.3",
+    "gulp-uglify": "^2.1.2"
+  }
+}
