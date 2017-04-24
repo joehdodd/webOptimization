@@ -21,19 +21,23 @@ gulp.task('responsive', function() {
       },{
         width: 480,
         suffix: '_small',
-        quality: 65
+        quality: 70
+      },{
+        width: 180,
+        suffix: '_xsmall',
+        quality: 60
       }]
     }))
     .pipe(gulp.dest('images'));
   });
 
 gulp.task('concatScripts', function () {
-  gulp.src([
+  gulp.src(
   //'js/jquery.js',
-    'js/fastclick.js',
+    'js/fastclick.js'
   //'js/foundation.js',
-    'js/foundation.equalizer.js',
-    'js/foundation.reveal.js'])
+  //'js/foundation.equalizer.js',
+/*'js/foundation.reveal.js'*/)
   .pipe(concat("scripts.js"))
   .pipe(gulp.dest("js"));
 });
