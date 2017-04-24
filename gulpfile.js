@@ -15,13 +15,13 @@ gulp.task('responsive', function() {
         suffix: '_large',
         quality: 80
       },{
-        width: 760,
+        width: 960,
         suffix: '_med',
         quality: 75
       },{
         width: 480,
         suffix: '_small',
-        quality: 70
+        quality: 65
       }]
     }))
     .pipe(gulp.dest('images'));
@@ -29,9 +29,9 @@ gulp.task('responsive', function() {
 
 gulp.task('concatScripts', function () {
   gulp.src([
-    'js/jquery.js',
+  //'js/jquery.js',
     'js/fastclick.js',
-    'js/foundation.js',
+  //'js/foundation.js',
     'js/foundation.equalizer.js',
     'js/foundation.reveal.js'])
   .pipe(concat("scripts.js"))
@@ -64,6 +64,10 @@ gulp.task('minifyStyles', function () {
   .pipe(clean())
   .pipe(rename('styles.min.css'))
   .pipe(gulp.dest("css"));
+})
+
+gulp.task('watchStyles', function () {
+  gulp.watch('css/**/*.*', ['concatStyles', 'minifyStyles']);
 })
 
 gulp.task('hello', function () {
